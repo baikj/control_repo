@@ -1,1 +1,1 @@
-classe profile::db {}
+class profile::db {}
