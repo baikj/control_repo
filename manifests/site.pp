@@ -12,3 +12,7 @@ node /^web/ {
 node /^db/ {
   include role::db_server
 }
+
+node /^agent*/ {
+  include role::app_server
+}
