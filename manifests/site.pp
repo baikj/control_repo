@@ -12,11 +12,3 @@ node /^web/ {
 node /^db/ {
   include role::db_server
 }
-
-node 'puppet-agent1' {
-  include role::app_server
-}
-
-node 'web.tobal.adds' {
-  include role::app_server
-}
