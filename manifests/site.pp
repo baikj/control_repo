@@ -13,6 +13,6 @@ node /^db/ {
   include role::db_server
 }
 
-node /^agent*/ {
+node /puppet-agent1/ {
   include role::app_server
 }
