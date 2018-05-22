@@ -5,6 +5,6 @@ node default {
   
   file { '/root/README':
     ensure  =>  present,
-    content => "Ceci est un readme\n",
+    content => "mon ip address is {ipadress}",
   }
 }
