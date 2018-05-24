@@ -7,7 +7,10 @@ class minecraft {
     ensure  =>  file,
     content =>  'eula=true',
   }
-  
+  file {'/opt/minecraft/server.jar':
+    ensure => file,
+    source => 'puppet:///modules/minecraft/server.jar'
+    }
   package {'default-jre':
     ensure  =>  present,
   }
