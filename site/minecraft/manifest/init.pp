@@ -11,10 +11,16 @@ class minecraft {
     ensure => file,
     source => 'puppet:///modules/minecraft/server.jar'
     }
+    
   package {'default-jre':
     ensure  =>  present,
   }
   
+  file {'/etc/systemd/system/minecraft.service':
+    ensure => file,
+    source => 'puppet:///modules/minecraft.server'
+    }
+    
   service {'minecraft':
     ensure  =>  running,
     enable  =>  true,
